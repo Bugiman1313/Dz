@@ -1,0 +1,70 @@
+Добавляем в модель данных дополнительные индексы и ограничения
+
+Цель: применять индексы в реальном проекте.
+
+Описание/Пошаговая инструкция выполнения домашнего задания:
+
+Проводим анализ возможных запросов\отчетов\поиска данных.
+
+Предполагаем возможную кардинальность поля.
+
+Создаем дополнительные индексы - простые или композитные.
+
+На каждый индекс пишем краткое описание зачем он нужен (почему по этому полю\полям).
+
+Думаем какие логические ограничения в БД нужно добавить - например какие поля должны быть уникальны, в какие нужно добавить условия, чтобы не нарушить бизнес логику. Пример - нельзя провести операцию по переводу средств на отрицательную сумму.
+
+Создаем ограничения по выбранным полям.
+
+Описание:
+
+Клиенты:
+idx_client_name индекс на name
+
+idx_client_contacts индекс на contacts
+
+idx_client_delivery_address индекс на address
+
+Цены:
+idx_prices_price индекс на price
+
+idx_prices_products_id индекс на products_id
+
+Покупки:
+idx_purchases_product_id индекс на product_id
+
+idx_purchases_client_id индекс на client_id
+
+idx_purchases_prices_id индекс на prices_id
+
+idx_purchases_purchase_data индекс на purchase_data
+
+Продукты:
+idx_products_categoty_id_name индекс на categoty_id_name
+
+idx_products_name индекс на name
+
+idx_products_manufacturer_id_name индекс на manufacturer_id_name
+
+idx_products_suppliers_id_name индекс на suppliers_id_name
+
+Поставщики:
+idx_suppliers_name индекс на name
+
+idx_suppliers_contacts индекс на contacts
+
+idx_suppliers_address индекс на address
+
+Производитель:
+idx_manufacturer_name индекс на name
+
+idx_manufacturer_address индекс на address
+
+idx_manufacturer_contacts индекс на contacts
+
+idx_munufacturer_profuct_descriptio индекс на profuct_descriptio
+
+idx_manufacterer_price индекс на price
+
+Категории:
+idx_categories_name индекс на name
