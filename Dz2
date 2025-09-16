@@ -1,70 +1,84 @@
+Домашнее задание
+
 Добавляем в модель данных дополнительные индексы и ограничения
 
-Цель: применять индексы в реальном проекте.
+*Цель:* применять индексы в реальном проекте.
 
-Описание/Пошаговая инструкция выполнения домашнего задания:
+*Описание/Пошаговая инструкция выполнения домашнего задания:*
 
-Проводим анализ возможных запросов\отчетов\поиска данных.
+1.  Проводим анализ возможных запросов\\отчетов\\поиска данных.
 
-Предполагаем возможную кардинальность поля.
+2.  Предполагаем возможную кардинальность поля.
 
-Создаем дополнительные индексы - простые или композитные.
+3.  Создаем дополнительные индексы - простые или композитные.
 
-На каждый индекс пишем краткое описание зачем он нужен (почему по этому полю\полям).
+4.  На каждый индекс пишем краткое описание зачем он нужен (почему по
+    этому полю\\полям).
 
-Думаем какие логические ограничения в БД нужно добавить - например какие поля должны быть уникальны, в какие нужно добавить условия, чтобы не нарушить бизнес логику. Пример - нельзя провести операцию по переводу средств на отрицательную сумму.
+5.  Думаем какие логические ограничения в БД нужно добавить - например
+    какие поля должны быть уникальны, в какие нужно добавить условия,
+    чтобы не нарушить бизнес логику. Пример - нельзя провести операцию
+    по переводу средств на отрицательную сумму.
 
-Создаем ограничения по выбранным полям.
+6.  Создаем ограничения по выбранным полям.
 
 Описание:
 
-Клиенты:
-idx_client_name индекс на name
+1.  Клиенты:
 
-idx_client_contacts индекс на contacts
+-   idx\_client\_name индекс на name
 
-idx_client_delivery_address индекс на address
+-   idx\_client\_contacts индекс на contacts
 
-Цены:
-idx_prices_price индекс на price
+-   idx\_client\_delivery\_address индекс на address
 
-idx_prices_products_id индекс на products_id
+2.  Цены:
 
-Покупки:
-idx_purchases_product_id индекс на product_id
+-   idx\_prices\_price индекс на price
 
-idx_purchases_client_id индекс на client_id
+-   idx\_prices\_products\_id индекс на products\_id
 
-idx_purchases_prices_id индекс на prices_id
+3.  Покупки:
 
-idx_purchases_purchase_data индекс на purchase_data
+-   idx\_purchases\_product\_id индекс на product\_id
 
-Продукты:
-idx_products_categoty_id_name индекс на categoty_id_name
+-   idx\_purchases\_client\_id индекс на client\_id
 
-idx_products_name индекс на name
+-   idx\_purchases\_prices\_id индекс на prices\_id
 
-idx_products_manufacturer_id_name индекс на manufacturer_id_name
+-   idx\_purchases\_purchase\_data индекс на purchase\_data
 
-idx_products_suppliers_id_name индекс на suppliers_id_name
+4.  Продукты:
 
-Поставщики:
-idx_suppliers_name индекс на name
+-   idx\_products\_categoty\_id\_name индекс на categoty\_id\_name
 
-idx_suppliers_contacts индекс на contacts
+-   idx\_products\_name индекс на name
 
-idx_suppliers_address индекс на address
+-   idx\_products\_manufacturer\_id\_name индекс на
+    manufacturer\_id\_name
 
-Производитель:
-idx_manufacturer_name индекс на name
+-   idx\_products\_suppliers\_id\_name индекс на suppliers\_id\_name
 
-idx_manufacturer_address индекс на address
+5.  Поставщики:
 
-idx_manufacturer_contacts индекс на contacts
+-   idx\_suppliers\_name индекс на name
 
-idx_munufacturer_profuct_descriptio индекс на profuct_descriptio
+-   idx\_suppliers\_contacts индекс на contacts
 
-idx_manufacterer_price индекс на price
+-   idx\_suppliers\_address индекс на address
 
-Категории:
-idx_categories_name индекс на name
+6.  Производитель:
+
+-   idx\_manufacturer\_name индекс на name
+
+-   idx\_manufacturer\_address индекс на address
+
+-   idx\_manufacturer\_contacts индекс на contacts
+
+-   idx\_munufacturer\_profuct\_descriptio индекс на profuct\_descriptio
+
+-   idx\_manufacterer\_price индекс на price
+
+7.  Категории:
+
+-   idx\_categories\_name индекс на name
